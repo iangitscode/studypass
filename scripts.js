@@ -1,40 +1,40 @@
 
 // Create and deserialize rewards array 
-let rewards = `Head Pat,1
-Head Pat,60
-Head Pat,300
-One "Good Girl",600
-Cuddle Coupon,1800
-Swiftplay Break,3600
-Bubble Tea Break,7200
-Cuddle Coupon,9000
-Quality Massage,10800
-Cuddle Coupon,12600
-Battlegrounds Break,13500
-Movie Date,18000
-Cuddle Coupon,19800
-Unrated Break,20700
-Dinner Date,25200
-Cuddle Coupon,27000
-Swiftplay Break,27900
-Fresh Baking4U,32400
-Cuddle Coupon,34200
-Battlegrounds Break,35100
-Movie Date,39600
-Cuddle Coupon,41400
-Unrated Break,42300
-Quality Massage,43200
-Personal Serenade,48600
-Swiftplay Break,49500
-Anime Night,54000
-Battlegrounds Break,56700
-Unrated Break,63900
-Homemade dinner,72000
-Quality Massage,75600
-Quality Massage,79140
-Cuddle Coupon,86400
-Breakfast In Bed,90000
-Acorn Brunch,108000`;
+let rewards = `Head Pat,1,Good job Eva!
+Head Pat,60,Good job Eva!
+Head Pat,300,Good job Eva!
+One "Good Girl",600,Yes you are :)
+Cuddle Coupon,1800,15 min usable anytime
+Swiftplay Break,3600,For a quicc break while working
+Bubble Tea Break,7200,Whenever you need a quick pick me up
+Cuddle Coupon,9000,15 min usable anytime
+Quality Massage,10800,Massaged until satisfied
+Cuddle Coupon,12600,15 min usable anytime
+Battlegrounds Break,13500,I promise not to punch you too hard
+Movie Date,18000,Movie of your choice - complete with popcorn and snacks
+Cuddle Coupon,19800,15 min usable anytime
+Unrated Break,20700,For a longer break while working :)
+Dinner Date,25200,Includes main course + dessert + drinks
+Cuddle Coupon,27000,15 min usable anytime
+Swiftplay Break,27900,For a quicc break while working
+Fresh Baking4U,32400,I will make baked goods of your choice
+Cuddle Coupon,34200,15 min usable anytime
+Battlegrounds Break,35100,I promise not to punch you too hard
+Movie Date,39600,Movie of your choice - complete with popcorn and snacks
+Cuddle Coupon,41400,15 min usable anytime
+Unrated Break,42300,For a longer break while working :)
+Quality Massage,43200,Massaged until satisfied
+Personal Serenade,48600,Song of your choice - filming not allowed
+Swiftplay Break,49500,For a quicc break while working
+Anime Night,54000,Wotakoi with your Wotaboi?
+Battlegrounds Break,56700,I promise not to punch you too hard
+Unrated Break,63900,For a longer break while working :)
+Homemade dinner,72000,3 courses - dishes included
+Quality Massage,75600,Massaged until satisfied
+Quality Massage,79140,Massaged until satisfied
+Cuddle Coupon,86400,15 min usable anytime
+Breakfast In Bed,90000,Pancakes + Hash browns + Fruit
+Acorn Brunch,108000,Whatever's in season`;
 
 rewards = rewards.split('\n');
 let output = [];
@@ -48,6 +48,7 @@ const rc = document.getElementsByClassName("rewards-track")[0];
 for (let i in rewards) {
   const name = rewards[i][0];
   const value = rewards[i][1];
+  const tooltip = rewards[i][2];
 
   const rewardSpan = document.createElement("span");
   const rewardStatus = document.createElement("span");
@@ -69,6 +70,8 @@ for (let i in rewards) {
   rewardName.addEventListener("click", () => {
     setAndSaveRewardAnnotations(i)
   });
+  rewardName.title = tooltip;
+
   rc.appendChild(rewardSpan);
 }
 
