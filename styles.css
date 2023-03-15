@@ -1,0 +1,92 @@
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+
+.rewards-container {
+  max-width: 80vw;
+  overflow-x: scroll;
+}
+
+.rewards-track {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reward {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reward-name {
+  white-space: nowrap;
+  margin: 10px 20px;
+  padding: 15px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px groove;
+  cursor: pointer;
+  position: relative;
+  font-style: italic;
+}
+
+.reward-name.checked:before {
+  content: '\2713';
+  font-size: 36px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #4cff42;
+  padding: 0 6px 0 0;
+}
+
+.reward-cost {
+  font-size: 24px;
+}
+
+.count {
+  font-size: 96px;
+}
+
+.button {
+  font-size: 48px;
+  padding: 20px 40px;
+  color: white;
+  background-color: #45536b;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #232b38;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
