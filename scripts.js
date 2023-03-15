@@ -34,7 +34,8 @@ Quality Massage,75600,Massaged until satisfied
 Quality Massage,79140,Massaged until satisfied
 Cuddle Coupon,86400,15 min usable anytime
 Breakfast In Bed,90000,Pancakes + Hash browns + Fruit
-Acorn Brunch,108000,Whatever's in season`;
+Acorn Brunch,108000,Whatever's in season
+Add New Rewards,108001,You've earned it :)`;
 
 rewards = rewards.split('\n');
 let output = [];
