@@ -77,7 +77,7 @@ for (let i in rewards) {
 }
 
 // Initiate variables
-let count = Math.max(localStorage.getItem("total_count"), 21780); // offset by 21780
+let count = Math.max(localStorage.getItem("total_count"), 25200+2700); // offset by 7h 45min
 let is_counting = false;
 drawCount();
 setAndSaveRewardAnnotations(null);
